@@ -1,0 +1,681 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Standard Zapp Configurator</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">    
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-fileupload.min.css" rel="stylesheet" media="screen">
+    <link href="css/jquery.fileupload-ui.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/jquery.miniColors.css"/>
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="span-10">
+    <h1>Standard Zmags Zapp Configuration</h1></br>
+      <ul id="myTab" class="nav nav-tabs">
+        <li class="active"><a href="#home_configurations" data-toggle="tab">Home</a></li>
+        <li><a href="#setup_information" data-toggle="tab">Setup Information<span id="warning-span"></span></a></li>
+        <li><a href="#general_configurations" data-toggle="tab">General<span id="warning-span"></span></a></li>
+        <li><a href="#navigation_module_configurations" data-toggle="tab">Navigation Module<span id="warning-span"></span></a></li>
+        <li><a href="#featured_publications_carousel_configurations" data-toggle="tab">Featured Publications Carousel<span id="warning-span"></span></a></li>
+        <li><a href="#library_configurations" data-toggle="tab">Library<span id="warning-span"></span></a></li>
+        <li><a href="#publication_viewer_configurations" data-toggle="tab">Publication Viewer<span id="warning-span"></span></a></li>
+        <li><a href="#twitter_youtube_configurations" data-toggle="tab">Twitter and Youtube<span id="warning-span"></span></a></li>
+        <li><a class="alert-info" id="submit_tab" href="#submit_modal" data-toggle="modal">Submit<span id="warning-span"></span></a></li>
+      </ul>
+      <form class="form-horizontal span-12" enctype="multipart/form-data" method="POST" action="">  
+        <div id="appTab" class="tab-content">
+
+          <!-- HOME CONFIGURATIONS-->
+          <div class="tab-pane fade in active" id="home_configurations">
+            <h2> ZMAGS' STANDARD IPAD APP PRODUCT</h2>
+            <br/>
+            <p>Zmags' Standard App Modules are outlined here: Please note that certain items/parts of the app not listed here can
+            be customized - check with PS/Labs for specific requests.</p>
+            <table class="home_table">
+              <tbody>
+                  <tr>
+                    <td>
+                      <h3>Analytics:</h3>
+                      <ul>
+                          <li>Google: Please provide the Google Analytics account.
+                            TALK TO ERIC. ALSO ASK WHAT IS TRACKED</li>
+                          <li>Omniture: There is a $2,800 cost for integrating with Omniture racking in the app, due to the custom nature of Omniture's analytics platform and each customers' needs</li>
+                      </ul>
+                    </td>
+                    <td>
+                      <h3>Customizable App Modules:</h3>
+                      <ul>
+                          <li>General Configurations</li>
+                          <li>Navigation Module</li>
+                          <li>Carousel of Featured Publications</li>
+                          <li>Library Module</li>
+                          <li>Publication Viewer</li>
+                          <li>YouTube and Twitter Modules</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                        <h3>Font Options in App:</h3>
+                        <img src="img/font_shot.png" />
+                    </td>
+                    <td>
+                      <button class="page_next btn btn-large btn-primary" type="button">Begin Configuration</button>
+                    </td>
+                  </tr>
+              </tbody>
+            </table>
+            <br/>
+          </div><!-- HOME CONFIGURATIONS-->
+
+          <!-- SETUP INFORMATION -->
+          <div class="tab-pane fade in" id="setup_information">
+            <div class="form_content span-8">
+              <h2>Setup Information</h3>
+              <hr>
+              <div id="alert"></div>
+              <div class="control-group">
+                <label class="control-label" for="id_email_address">Email Address:</label>
+                <div class="controls">
+                  <input class="required email" type="text"  id="id_email_address" name="email_address" placeholder="Email Address"/>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_company">Company:</label>
+                <div class="controls">
+                  <input class="text_required" type="text" id="id_company" name="company" placeholder="Company Name"/>
+                </div>
+              </div>  
+            </div>
+            <ul class="pager">
+              <li class="previous">
+                <a class="page_previous" href="#home_configurations">&larr; Previous</a>
+              </li>
+              <li class="next">
+                <a class="page_next" href="#general_configurations">Next &rarr;</a>
+              </li>
+            </ul>    
+          </div><!-- SETUP INFORMATION -->
+
+          <!--GENERAL CONFIGURATIONS -->
+          <div class="tab-pane fade in" id="general_configurations">
+            <div class="form_content span-8">
+              <h2> General App Configurations</h3>
+              <hr>
+              <div id="alert"></div>
+              <div class="control-group">
+                <label class="control-label" for="id_splash_loading_image">Splash Loading Image:</label>
+                <div class="controls">
+                  <input type="file" class="required image" id="id_splash_loading_image" name="file[]" placeholder="Splash Loading Image"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" This image is displayed on the intial load screen after someone initially launches the Application. Recommended dimension for the image are:1024x768" rel="tooltip"><i class="icon-question-sign icon-large" ></i></a>
+                </div>
+              </div>
+              <h3>Top Navigation Bar</h3>
+              <div class="control-group">
+                <label class="control-label" for="id_top_navigation_color">Color:</label>
+                <div class="controls">
+                  <div class="input-prepend input-append">      
+                    <input id="id_top_navigation_color" class="color miniColors required" type="minicolors" name="top_navigation_color" data-opacity="1"/>
+                  </div>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Choose the color for the top bar.  The color entered will be a gradient from white (top) to your custom color (bottom).  Default Black = hex value: 000000 " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_top_right_navigation_image">Right Navigation Image:</label>
+                <div class="controls">
+                  <input type="file" class="image" id="id_top_right_navigation_image" name="file[]"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" Adds a small image to the right side of the top tab bar (i.e. company logo) For best quality, use an image that has 88px of height here." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+              <div class="control-group">
+                <label class="control-label" for="id_top_left_navigation_image">Left Navigation Image:</label>
+                <div class="controls">
+                  <input type="file" class="image" id="id_top_left_navigation_image" name="file[]" placeholder="Top left Navigation Image"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Adds a small image to the left side of the top tab bar (i.e. company logo) For best quality, use an image that has 88px of height here. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+                  <h3>Bottom Navigation Bar</h3>
+              <div class="control-group">
+                <label class="control-label" for="id_bottom_navigation_color">Color:</label>
+                <div class="controls">
+                  <div class="input-prepend input-append">
+                  <input class="color miniColors required" type="minicolors" id="id_bottom_navigation_color" name="bottom_navigation_color" data-opacity="1" />
+                  </div>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" The color of the tab bar in the hex color code format.  Ex. Black = 000000" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_bottom_right_navigation_image">Right Navigation Image:</label>
+                <div class="controls">
+                  <input type="file" class="image" id="id_bottom_right_navigation_image" name="file[]" placeholder="Bottom right Navigation Image"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" Adds a small image to the right side of the bottom Navigation bar (i.e. company logo) For best quality, use an image that has 88px of height here." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+              <div class="control-group">
+                <label class="control-label" for="id_bottom_left_navigation_image">Left Navigation Image:</label>
+                <div class="controls">
+                  <input type="file" class="image" id="id_bottom_left_navigation_image" name="file[]" placeholder="Bottom left Navigation Image"/>
+                    &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Adds a small image to the left side of the bottom Navigation bar (i.e. company logo) For best quality, use an image that has 88px of height here. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <ul class="pager">
+              <li class="previous">
+                <a class="page_previous" href="#setup_information">&larr; Previous</a>
+              </li>
+              <li class="next">
+                <a class="page_next" href="#navigation_module_configurations">Next &rarr;</a>
+              </li>
+            </ul> 
+            </div> 
+            <div class="image_content span-4">
+              <a class="preview_image" href="img/general.png" rel="lightbox" title="Top and Bottom Navigation Bars"><img class="img-polaroid" src="img/general_thumb.png"/></a>
+              <a class="preview_image" href="img/splash.png" rel="lightbox" title="Loading Image/Splash Screen"><img class="img-polaroid" src="img/splash_thumb.png"/></a><br/>
+            </div>               
+          </div> <!--GENERAL CONFIGURATIONS -->
+
+          <!--NAVIGATION MODULE CONFIGURATIONS -->          
+          <div class="tab-pane fade in" id="navigation_module_configurations">
+            <div class="form_content span-8">
+              <h2>Navigation Module Configurations</h2>
+              <hr>
+              <div id="alert"></div>
+              <div class="control-group">
+                <label class="control-label" for="id_navigation_module">Display Navigation Module?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_navigation_module" name="navigation_module"  />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Choose whether or not you would like a navigation module in the app" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div id="id_navigation_module_options"> 
+                <div class="control-group">
+                  <label class="control-label" for="id_navigation_module_color">Color:</label>
+                  <div class="controls">
+                    <div class="input-prepend input-append">
+                    <input class="miniColors color" type="minicolors" id="id_navigation_module_color" name="navigation_module_color" data-opacity="1.0" />
+                    </div>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title=" Set background color for this page." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="id_navigation_module_background_image">Navigation Module Background Image:</label>
+                  <div class="controls">
+                    <input type="file" class="image" id="id_navigation_module_background_image" name="file[]" placeholder="Navigation Background Image"/>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title="Set background image for this page. Recommended dimension for this image: 2052x1550 " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div> 
+                <div class="control-group">
+                  <label class="control-label" for="id_navigation_module_title">Navigation Module Title:</label>
+                  <div class="controls">
+                    <input type="text" class="text_required" id="id_navigation_module_title" name="navigation_module_title" placeholder="Navigation Module title"/>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title="Allows the user to add a title to the page. (Currently applies to the Navigation only)  " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div>
+              </div> 
+              <ul class="pager">
+                <li class="previous">
+                  <a class="page_previous" href="#general_configurations">&larr; Previous</a>
+                </li>
+                <li class="next">
+                  <a class="page_next" href="#featured_publications_carousel_configurations">Next &rarr;</a>
+                </li>
+              </ul>
+            </div>
+            <div class="image_content span-4">
+              <a class="preview_image" href="img/nav_module.png" rel="lightbox" title="The Navigation Page is an optional landing page where users will view a background image with all modules in icon format continuously slide across the screen (please reference screen shot). These items in motion match the bottom nav bar menu items."><img class="img-polaroid" src="img/nav_module_thumb.png"/></a>
+            </div>   
+          </div> <!--NAVIGATION MODULE CONFIGURATIONS -->
+
+          <!-- FEATURED PUBLICATIONS CAROUSEL CONFIGURATIONS -->
+          <div class="tab-pane fade in" id="featured_publications_carousel_configurations">
+            <div class="form_content span-8">
+            <h2>Featured Publications Carousel Configurations</h3>
+            <hr>
+            <div id="alert"></div>
+            <div class="control-group">
+              <label class="control-label" for="id_featured_carousel">Display Featured Carousel?</label>
+              <div class="controls">
+                <input type="checkbox" id="id_featured_carousel" name="featured_carousel"  />
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Choose whether or not you would like a featured carousel module in the app" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div> 
+            <div id="id_featured_carousel_options">
+              <div class="control-group">
+                <label class="control-label" for="id_featued_publications_navigation_bar">Display Top Navigation Bar ?</label>
+                <div class="controls">
+                  <input type="checkbox" name="featured_publications_navigation_bar" id="id_featured_publications_navigation_bar"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="By checking this checkbox, you can choose whether to show a Navigation bar or not at the top of the page. The title bar can show the title of the current page your on. As well as company icons, logos, etc.  " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div id="id_featured_publications_navigation_bar_options">
+                <div class="control-group">
+                  <label class="control-label" for="id_featured_publications_background_color">Background Color:</label>
+                  <div class="controls">
+                    <div class="input-prepend input-append">
+                    <input class="miniColors color" type="minicolors" id="id_featured_publications_background_color" name="featured_publications_background_color" data-opacity="1.0" />
+                    </div>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title="Sets a default background color for the carousel page " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div> 
+                <div class="control-group">
+                  <label class="control-label" for="id_featured_publications_background_image">Background Image:</label>
+                  <div class="controls">
+                    <input type="file" class="image" id="id_featured_publications_background_image" name="file[]" placeholder="Background Image"/>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title="By providing a image path, you can add a background image to the carousel page " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div>
+              </div> 
+               <div class="control-group">
+                <label class="control-label" for="id_featured_publications_carousel_header">Display Carousel Header?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_featured_publications_carousel_header" name="featured_publications_carousel_header" />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" Do you want the header of the carousel show up ? if yes, please check the checkbox." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div id="id_featured_publications_carousel_header_options">
+                <div class="control-group">
+                  <label class="control-label" for="id_featured_publications_carousel_header_font">Carousel Header Font:</label>
+                  <div class="controls">
+                    <input type="text" class="text_required" id="id_featured_publications_carousel_header_font" name="featured_publications_carousel_header_font" placeholder="Font"/>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title=" Changing the font style of the text on top of the carousel" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label" for="id_featued_publications_carousel_header_color">Carousel Header Font Color:</label>
+                  <div class="controls">
+                    <div class="input-prepend input-append">
+                    <input class="miniColors required color" type="minicolors" id="id_featured_publications_carousel_header_color" name="featured_publications_carousl_header_color" data-opacity="1" />
+                    </div>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title="Changing the font color of the text on top of the carousel " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_featued_publications_publication_title_color">Publication Title Color:</label>
+                <div class="controls">
+                  <div class="input-prepend input-append">
+                  <input class="miniColors required color" type="minicolors" id="id_featured_publications_publication_title_color" name="featured_publications_publication_title_color" data-opacity="1" />
+                  </div>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" The font color of the text below each publication" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_featued_publications_arrow_color">Side Navigation Arrow Color:</label>
+                <div class="controls">
+                  <div class="input-prepend input-append">
+                  <input class="miniColors required color" type="minicolors" id="id_featured_publications_arrow_color" name="featured_publications_publications_arrow_color" data-opacity="1" />
+                  </div>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="An image for the left/right arrow controlling the carousel (as shown in screen shot) By proving a color, you can change its color.  " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+            </div>
+            <ul class="pager">
+              <li class="previous">
+                <a class="page_previous" href="#navigation_module_configurations">&larr; Previous</a>
+              </li>
+              <li class="next">
+                <a class="page_next" href="#library_configurations">Next &rarr;</a>
+              </li>
+            </ul>
+            </div>
+            <div class="image_content span-4">
+              <a class="preview_image" href="img/featured.png" rel="lightbox" title="Click to Preview"><img class="img-polaroid" src="img/featured_thumb.png"/></a><br/>
+            </div>
+          </div> <!-- FEATURED PUBLICATIONS CAROUSEL CONFIGURATIONS -->
+
+          <!-- LIBRARY CONFIGURATIONS -->
+          <div class="tab-pane fade in" id="library_configurations">
+            <div class="form_content span-8">
+            <h2>Library Configurations</h2>
+            <hr>
+            <div id="alert"></div>
+            <p width="400px">The Library Module is an organized shelf of all publications to
+            be included in the app. </br>Clients can select what publications go
+            on what shelves and name those shelves to describe the group of
+            publications on a particular shelf. </br>Client will need to fill out an
+            excel form with publication information to be included.</p>
+            <div class="control-group">
+              <label class="control-label" for="id_library_navigation_bar">Display Top Navigation Bar?</label>
+              <div class="controls">
+                <input type="checkbox" id="id_library_navigation_bar" name="library_navigation_bar" />
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="By checking this box, you can decide if navigation bar appears or disappears on this screen " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div id="id_library_navigation_bar_options">
+              <div class="control-group">
+                <label class="control-label" for="id_library_background_color">Background Color:</label>
+                <div class="controls">
+                  <div class="input-prepend input-append">
+                  <input class="miniColors color" type="minicolors" id="id_library_background_color" name="library_background_color" data-opacity="1.0"  />
+                  </div>            
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" Set background color for the library" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+              <div class="control-group">
+                <label class="control-label" for="id_library_background_image">Background Image:</label>
+                <div class="controls">
+                  <input type="file" class="image" id="id_library_background_image" name="file[]" placeholder="Background Image"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="By providing an image path, you can add a background image to current page" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_gradient">Do you want a gradient ?</label>
+              <div class="controls">
+                <input type="checkbox" id="id_library_gradient" name="library_gradient"/>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title=" A gradient will make your page looks nice !" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_shelf_edge_color">Shelf Edge Color:</label>
+              <div class="controls">
+                <div class="input-prepend input-append">
+                <input class="miniColors color" type="minicolors" id="id_library_shelf_edge_color" name="library_shelf_edge_color" data-opacity="1.0"/>
+                </div>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title=" " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div> 
+            <div class="control-group">
+              <label class="control-label" for="id_library_shelf_surface_color">Shelf Surface Color:</label>
+              <div class="controls">
+                <div class="input-prepend input-append">
+                <input class="miniColors color" type="minicolors" id="id_library_shelf_surface_color" name="library_shelf_surface_color" data-opacity="1.0" />
+                </div>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title=" " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div> 
+            <div class="control-group">
+              <label class="control-label" for="id_library_shelf_title_font">Shelf Title Font:</label>
+              <div class="controls">
+                <input type="text" class="text_required" id="id_library_shelf_title_font" name="library_shelf_title_font" placeholder="Shelf Title Font"/>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Changing the font of the row title inside the publication library/bookshelf. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_shelf_title_font_color">Shelf Title Font Color:</label>
+              <div class="controls">
+                <div class="input-prepend input-append">
+                <input class="miniColors required color" type="minicolors" id="id_library_shelf_title_font_color" name="library_shelf_title_font_color" data-opacity="1.0"/>
+                </div>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Change the row title text color " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_publication_title_font">Publication Title Font:</label>
+              <div class="controls">
+                <input type="text" class="text_required" id="id_library_publication_title_font" name="library_publication_title_font" placeholder="Publication Title Font"/>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Change the title font style " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_publication_title_font_color">Publication Title Font Color:</label>
+              <div class="controls">
+                <div class="input-prepend input-append">
+                <input class="miniColors required color" type="minicolors" id="id_library_publication_title_font_color" name="library_publication_title_font_color" data-opacity="1.0"/>
+                </div>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title=" Change the title font style" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_thumbnail">Thumbnails?</label>
+              <div class="controls">
+                <input type="checkbox" id="id_library_thumbnail" name="library_thumbnail" />
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title=" Do you want the thumbnail of each pubication show up in the library ?" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_library_title">Titles?</label>
+              <div class="controls">
+                <input type="checkbox" id="id_library_title" name="library_title" />
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Do you want the title of each pubication show up in the library ?" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <ul class="pager">
+              <li class="previous">
+                <a class="page_previous" href="#featured_publications_carousel_configurations">&larr; Previous</a>
+              </li>
+              <li class="next">
+                <a class="page_next" href="#publication_viewer_configurations">Next &rarr;</a>
+              </li>
+            </ul>
+          </div>
+          <div class="image_content span-4">            
+            <a class="preview_image" href="img/gridnew.png" rel="lightbox" title="The Library Module is an organized shelf of all publications to be included in the app. Clients can select what publications go on what shelves and name those shelves to describe the group of publications on a particular shelf.">
+              <img class="img-polaroid" src="img/gridnew_thumb.png"/>
+            </a><br/>
+          </div>
+          </div> <!-- LIBRARY CONFIGURATIONS -->
+
+           <!-- PUBLICATION VIEWER CONFIGURATIONS -->
+          <div class="tab-pane fade in" id="publication_viewer_configurations">
+            <div class="form_content span-8">
+            <h2> Publication Viewer Configurations</h3>
+            <hr>
+            <div id="alert"></div>
+            <p>The Publication Viewer is the "skin" surrounding any publication
+            that the user selects to open.</p>
+            <div class="control-group">
+              <label class="control-label" for="id_viewer_navigation">Display Viewer Top Navigation?</label>
+              <div class="controls">
+                <input type="checkbox" id="id_viewer_navigation" name="viewer_navigation" />
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="By checking this checkbox, you can choose whether to show a Navigation bar or not at the top of the page. The title bar can show the title of the current page your on. As well as company icons, logos, etc " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div id="viewer_share" class="fade in">
+              <div class="control-group">
+                <label class="control-label" for="id_viewer_twitter">Twitter?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_viewer_twitter" name="viewer_twitter" />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_viewer_email">Email?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_viewer_email" name="viewer_email" />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_viewer_facebook">Facebook?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_viewer_facebook" name="viewer_facebook" />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_viewer_loading_image">Viewer Loading Image?</label>
+              <div class="controls">
+                <input type="file" class="image" id="id_viewer_loading_image" name="file[]" placeholder="Viewer Loading Image"/>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Sometimes, a publication will not load the page requested prior to the user accessing it. In this case, the display loading indicator will appear to let the user know the page is loading. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="id_viewer_background_color">Background Color:</label>
+              <div class="controls">
+                <div class="input-prepend input-append">
+                <input class="miniColors color" type="minicolors" id="id_viewer_background_color" name="viewer_background_color" data-opacity="1.0"/>
+                </div>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Background color for current page entered in the HTML format. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div> 
+            <div class="control-group">
+              <label class="control-label" for="id_viewer_background_image">Background Image:</label>
+              <div class="controls">
+                <input type="file" class="image" id="id_viewer_background_image" name="file[]" placeholder="Background Image"/>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="Adds a background image to the publication.  " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div> 
+            <div class="control-group">
+              <label class="control-label" for="id_viewer_background_image">Bottom Slide Navigation:</label>
+              <div class="controls">
+                <textarea id="id_viewer_color_scheme" rows="5" name="viewer_color_scheme" placeholder="Write here for a color scheme besides gray."></textarea>
+                &nbsp;
+                <a href="#" class="question_sign" data-original-title="By providing necessary information, you can custome the srubber to make it appears the way you expected. For exmaple: you can change scrubber grip touched image, scrubber grip track background color, track border color etc. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+              </div>
+            </div>
+            <ul class="pager">
+              <li class="previous">
+                <a class="page_previous" href="#library_configurations">&larr; Previous</a>
+              </li>
+              <li class="next">
+                <a class="page_next" href="#twitter_youtube_configurations">Next &rarr;</a>
+              </li>
+            </ul>
+          </div>
+          <div class="image_content span-4">           
+            <a class="preview_image" href="img/viewer3.png" rel="lightbox" title="Loading Image"><img class="img-polaroid" src="img/viewer3_thumb.png"/></a>
+            <a class="preview_image" href="img/viewerBackground.png" rel="lightbox" title="Background Viewer Image"><img class="img-polaroid" src="img/viewerBackground_thumb.png"/></a>
+          </div>
+          </div> <!-- PUBLICATION VIEWER CONFIGURATIONS -->
+
+           <!-- TWITTER AND YOUTUBE CONFIGURATIONS -->
+          <div class="tab-pane fade in" id="twitter_youtube_configurations">
+            <div class="form_content span-8">
+              <h2>Twitter and Youtube Module Configurations</h2>
+              <hr>
+              <div id="alert"></div>
+                <p>
+                Twitter feed and a Youtube Channel are two separate modules
+                that can be included as menu items. They are, however,<br/>
+                customized the same way (ie, same background color/image<br/>
+                applies to both).
+                </p>
+              <div class="control-group">
+                <label class="control-label" for="id_twitter">Twitter Module?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_twitter" name="twitter"  />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Choose whether or not you would like a Twitter module." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <div id="id_twitter_options">
+                <div class="control-group">
+                  <label class="control-label" for="id_twitter_account">Twitter Account:</label>
+                  <div class="controls">
+                    <input type="text" class="twitter required" id="id_twitter_account" name="twitter_account" placeholder="@Example"/>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title="Linking to a twitter account." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                  </div>
+                </div> 
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_youtube">Youtube Module?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_youtube" name="youtube"  />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Choose whether or not you would like a Youtube module." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+              <div id="id_youtube_options">
+                <div class="control-group">
+                  <label class="control-label" for="id_youtube_url">Youtube URL:</label>
+                  <div class="controls">
+                    <input type="text" class="url required" id="id_youtube_url" name="youtube_url" placeholder="Youtube URL"/>
+                    &nbsp;
+                    <a href="#" class="question_sign" data-original-title=" Linking to a Youtube account." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>             
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label" for="id_twitter_youtube_navigation_bar">Display Navigation Bar?</label>
+                <div class="controls">
+                  <input type="checkbox" id="id_twitter_youtube_navigation_bar" name="twitter_youtube_navigation_bar"  />
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="By checking this checkbox, you can choose whether to show a Navigation bar or not at the top of the page. The title bar can show the title of the current page your on. As well as company icons, logos, etc. " rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+              <div class="control-group">
+                <label class="control-label" for="id_twitter_youtube_background_color">Background Color:</label>
+                <div class="controls">
+                  <div class="input-prepend input-append">
+                  <input type="minicolors" class="miniColors color" id="id_twitter_youtube_background_color" name="twitter_youtube_background_color"  data-opacity="1.0"/>
+                  </div>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title="Background color for current page entered in the HTML format." rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div> 
+              <div class="control-group">
+                <label class="control-label" for="id_twitter_youtube_background_image">Background Image:</label>
+                <div class="controls">
+                  <input type="file" class="image" id="id_twitter_youtube_background_image" name="file[]" placeholder="Background Image"/>
+                  &nbsp;
+                  <a href="#" class="question_sign" data-original-title=" By providing an image path, you can add a background image to current page" rel="tooltip"><i class="icon-question-sign icon-large"></i></a>
+                </div>
+              </div>
+              <ul class="pager">
+              <li class="previous">
+                <a class="page_previous" href="#publication_viewer_configurations">&larr; Previous</a>
+              </li>       
+            </ul>
+            </div> 
+          <div class="image_content span-4">
+            <a class="preview_image" href="img/twitter.png" rel="lightbox" title="twitter"><img class="img-polaroid" src="img/twitter_thumb.png"/></a>
+          </div>    
+        </div><!-- TWITTER AND YOUTUBE CONFIGURATIONS -->     
+      </form>
+    <div>  
+      <div id="submit_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>
+        <h3 id="myModalLabel">Submit Zapp</h3>
+      </div>
+      <div class="modal-body">         
+        <div id="modal-submit">
+          <button class="btn btn-large btn-primary" id="submit_app" type="button">Finish and Submit</button>
+          <div id="submitAlert"></div>
+        </div>
+      </div>
+      <div class="modal-footer">                  
+      </div>
+    </div>       
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/jquery.miniColors.js"></script>  
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+  </html>

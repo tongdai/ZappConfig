@@ -1,0 +1,144 @@
+a.preview_image{
+	float:left;
+	margin-left:14px;
+}
+
+table.home_table{
+	width:900px;
+}
+table.home_table td{
+	width:50%;
+	padding:0 20px;
+}
+a:hover{
+	text-decoration: none;
+}
+i.icon-question-sign{
+	position: relative;
+	top: 4px;
+}
+.form-content{
+  float: left;
+}
+.image_content{
+  float: right
+}
+.valid{
+  border-color: rgba(26,192,52, 0.8)!important;
+  outline: 0!important;
+  outline: thin dotted \9!important;!important 
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(26,192,52,.6)!important;
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(26,192,52,.6)!important;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(26,192,52,.6)!important;
+}
+
+.invalid{
+  border-color: rgba(235, 43, 43, 0.8)!important ;
+  outline: 0!important ;
+  outline: thin dotted \9!important ;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(235,43,43,.6)!important ;
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(235,43,43,.6)!important ;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(235,43,43,.6)!important ;
+}
+input.span2{
+  width:147px !important;
+}
+.tooltip-inner{
+   text-align: left !important;
+}
+
+
+input.miniColors{
+  display: inline-block;
+  height: 20px;
+  padding: 4px 6px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555555;
+  -webkit-border-radius: 4px 4px 4px 4px !important;
+  -moz-border-radius: 4px 4px 4px 4px  !important;
+  border-radius: 4px 4px 4px 4px  !important;
+  vertical-align: middle;
+}
+
+
+input.miniColors{
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border linear .2s, box-shadow linear .2s;
+  -moz-transition: border linear .2s, box-shadow linear .2s;
+  -o-transition: border linear .2s, box-shadow linear .2s;
+  transition: border linear .2s, box-shadow linear .2s;
+}
+
+
+input.miniColors:focus{
+  border-color: rgba(82, 168, 236, 0.8);
+  outline: 0;
+  outline: thin dotted \9;
+  /* IE6-9 */
+
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6);
+}
+.minicolors-swatch{
+  vertical-align: top !important;
+  height: 28px !important;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  -webkit-border-radius: 4px 4px 4px 4px !important;
+  -moz-border-radius: 4px 4px 4px 4px  !important;
+  border-radius: 4px 4px 4px 4px  !important;
+}
+
+.minicolors-panel{
+  top:34px !important;
+}
+
+div#appTab{
+  min-height: 800px;
+}
+
+.input-prepend.input-append input, .input-prepend.input-append select, .input-prepend.input-append .uneditable-input{
+  margin-right:5px !important;
+}
+
+
+.form-horizontal .control-label{
+   width:190px !important;
+   margin-right:20px;
+}
+.control-group{
+  width:500px !important;
+}
+select, input[type="file"]{
+  line-height: 0 !important;
+  position:relative;
+  top:6px;
+  width:220px;
+}
+
+.tab-invalid{
+color: #b30000;
+opacity: 0.8;
+}
+
+.modal-footer{
+  text-align: none!important;
+}
+
+#submitAlert{
+  margin: 10px 30px 10px 30px;
+}
+
+#modal-submit{
+  margin: 0px auto!important;
+  text-align: center!important;
+}
+
